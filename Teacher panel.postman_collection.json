@@ -1,0 +1,2014 @@
+{
+  "info": {
+    "_postman_id": "dd27f2fb-6bae-4630-8c88-94a1e56c53c9",
+    "name": "Teacher panel",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31573826",
+    "_collection_link": "https://go.postman.co/collection/42436005-dd27f2fb-6bae-4630-8c88-94a1e56c53c9?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/logout",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "verifyOtp",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{ api_base_url }}/teacher/verifyOtp?email=aktarozzaman8@gmail.com&otp=182517",
+              "host": [
+                "{{ api_base_url }}"
+              ],
+              "path": [
+                "teacher",
+                "verifyOtp"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "aktarozzaman8@gmail.com"
+                },
+                {
+                  "key": "otp",
+                  "value": "182517"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Forgot password set",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/forgot-password-set?email=aktarozzaman8@gmail.com&password=12345678&password_confirmation=12345678",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "forgot-password-set"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "aktarozzaman8@gmail.com"
+                },
+                {
+                  "key": "password",
+                  "value": "12345678"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "12345678"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reset Password",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/reset-password?email=aktarozzaman8@gmail.com&password=123456789&password_confirmation=123456789&previous_password=12345678",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "reset-password"
+              ],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "aktarozzaman8@gmail.com"
+                },
+                {
+                  "key": "password",
+                  "value": "123456789"
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "123456789"
+                },
+                {
+                  "key": "previous_password",
+                  "value": "12345678"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Class In Out / Routine",
+      "item": [
+        {
+          "name": "list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/routine",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "routine"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Class Check In",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/class/checkin?subject_routine_id=882",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "class",
+                "checkin"
+              ],
+              "query": [
+                {
+                  "key": "subject_routine_id",
+                  "value": "882"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Class Check out",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/class/checkout?subject_routine_id=882",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "class",
+                "checkout"
+              ],
+              "query": [
+                {
+                  "key": "subject_routine_id",
+                  "value": "882"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Class Attendance Status",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/class/attendance-status?subject_routine_id=918",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "class",
+                "attendance-status"
+              ],
+              "query": [
+                {
+                  "key": "subject_routine_id",
+                  "value": "918"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Syllabus",
+      "item": [
+        {
+          "name": "Syllabus list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/syllabus",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "syllabus"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Notice",
+      "item": [
+        {
+          "name": "Notice List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/notice",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "notice"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Total Unread",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/unread-notice",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "unread-notice"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Mark As Read",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "notice_id",
+                  "value": "61",
+                  "description": "required",
+                  "type": "text",
+                  "uuid": "06377c8a-02d6-42e9-acfa-27b92fe09137"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/notice/mark-as-read",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "notice",
+                "mark-as-read"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Teacher Attendance",
+      "item": [
+        {
+          "name": "Teacher Attendance",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/attendance",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "attendance"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Teacher Attendance By Month",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "month",
+                  "value": "4",
+                  "type": "text",
+                  "uuid": "066e1c1a-2b86-42d4-a47f-2340c2117bff"
+                },
+                {
+                  "key": "year",
+                  "value": "2026",
+                  "type": "text",
+                  "uuid": "fd9f8b87-c143-4fea-8190-320856d2a7f2"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/attendance-by-month",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "attendance-by-month"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Teacher Attendance Store",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/attendance",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "attendance"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Student Attendance",
+      "item": [
+        {
+          "name": "Class List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/class-list",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "class-list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Department and section",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/get-dept-section?class_id=1",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "get-dept-section"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assigned Subjects list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/get-assigned-subjects?class_id=1&department_id=8&section_id=10",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "get-assigned-subjects"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Session",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/get-session",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "get-session"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter student",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/get-attendance?class_id=1&department_id=8&section_id=10&subject_id=144&session=2024-25",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "get-attendance"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10"
+                },
+                {
+                  "key": "subject_id",
+                  "value": "144"
+                },
+                {
+                  "key": "session",
+                  "value": "2024-25"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Student Attendance Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/update-attendance?student_id=46&class_id=1&date=2026-01-22&section_id=10&department_id=8&subject_id=144&is_present=1",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "update-attendance"
+              ],
+              "query": [
+                {
+                  "key": "student_id",
+                  "value": "46"
+                },
+                {
+                  "key": "class_id",
+                  "value": "1"
+                },
+                {
+                  "key": "date",
+                  "value": "2026-01-22",
+                  "description": "yy-mm-dd"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8"
+                },
+                {
+                  "key": "subject_id",
+                  "value": "144"
+                },
+                {
+                  "key": "is_present",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Class Routine",
+      "item": [
+        {
+          "name": "Class Routine",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/routine",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "routine"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Assignment",
+      "item": [
+        {
+          "name": "list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-list",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-edit?id=4",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-edit"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Download File",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-download?id=5",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-download"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-delete?id=5",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-delete"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Class List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/class-list",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "class-list"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Department and section",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/get-dept-section?class_id=1",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "get-dept-section"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assigned Subjects list",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/get-assigned-subjects?class_id=1&department_id=8&section_id=10",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "get-assigned-subjects"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Store",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "multipart/form-data",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10",
+                  "type": "text"
+                },
+                {
+                  "key": "assignment_name",
+                  "value": "demo",
+                  "type": "text"
+                },
+                {
+                  "key": "subject_id",
+                  "value": "144",
+                  "type": "text"
+                },
+                {
+                  "key": "submission_date",
+                  "value": "2026-01-22",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-store",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-store"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "multipart/form-data",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "value": "8",
+                  "type": "text",
+                  "uuid": "9f3bce3c-bb05-4193-b1f5-ed20c413c9ff"
+                },
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8",
+                  "type": "text"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10",
+                  "type": "text"
+                },
+                {
+                  "key": "assignment_name",
+                  "value": "demo update",
+                  "type": "text"
+                },
+                {
+                  "key": "subject_id",
+                  "value": "144",
+                  "type": "text"
+                },
+                {
+                  "key": "submission_date",
+                  "value": "01-22-2026",
+                  "type": "text"
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-update",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Exam Marks Input",
+      "item": [
+        {
+          "name": "Exam Marks Input list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/exam-marks-input?class_id=1&section_id=10&department_id=8&exam_id=1&exam_year=2026&session=2024-25&search=",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "exam-marks-input"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1"
+                },
+                {
+                  "key": "section_id",
+                  "value": "10"
+                },
+                {
+                  "key": "department_id",
+                  "value": "8"
+                },
+                {
+                  "key": "exam_id",
+                  "value": "1"
+                },
+                {
+                  "key": "exam_year",
+                  "value": "2026"
+                },
+                {
+                  "key": "session",
+                  "value": "2024-25"
+                },
+                {
+                  "key": "search",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exam list",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/exam-list?class_id=1",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "exam-list"
+              ],
+              "query": [
+                {
+                  "key": "class_id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exam Marks Save",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "student_id",
+                  "value": "46",
+                  "type": "text",
+                  "uuid": "54b8a5c5-ab54-4e7b-a996-728b8cb63c3f"
+                },
+                {
+                  "key": "class_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "exam_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "exam_year",
+                  "value": "2025",
+                  "type": "text"
+                },
+                {
+                  "key": "session",
+                  "value": "2024-25",
+                  "type": "text"
+                },
+                {
+                  "key": "subject_id",
+                  "value": "144",
+                  "type": "text",
+                  "uuid": "a11d4871-e4fc-41dc-8e80-638060bccf85"
+                },
+                {
+                  "key": "search",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "marks[cq]",
+                  "value": "50",
+                  "type": "text",
+                  "uuid": "94b99a15-74df-4683-9d3f-03ef426f3fff"
+                },
+                {
+                  "key": "marks[mcq]",
+                  "value": "10",
+                  "type": "text",
+                  "uuid": "3b730138-e28b-40e1-a49a-896413ecff82"
+                },
+                {
+                  "key": "marks[practical]",
+                  "value": "20",
+                  "type": "text",
+                  "uuid": "2a32c0e3-165d-409e-882e-0a13971901b6"
+                },
+                {
+                  "key": "marks[quiz_test]",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "marks[mid_term]",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "marks[attendance]",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "marks[is_absent]",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/exam-marks-save",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "exam-marks-save"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "item": [
+        {
+          "name": "Profile",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "https://college.cybersparkglobal.com/api/teacher/profile",
+              "protocol": "https",
+              "host": [
+                "college",
+                "cybersparkglobal",
+                "com"
+              ],
+              "path": [
+                "api",
+                "teacher",
+                "profile"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "protocolProfileBehavior": {
+            "strictSSL": false
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Hawlader Mosharraf Hossain",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "Musharraf",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "phone",
+                  "value": "01779287296",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "email",
+                  "value": "aktarozzaman5002@gmail.com",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "father_name",
+                  "value": "demo",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "mother_name",
+                  "value": "sd",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "religion",
+                  "value": "Islam",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "nid_no",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "bank_id",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "passport_no",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "non_gov_joining_date",
+                  "value": "2026-10-11",
+                  "type": "text",
+                  "description": "Y-m-d",
+                  "disabled": true
+                },
+                {
+                  "key": "gov_joining_date",
+                  "value": "2026-10-15",
+                  "type": "text",
+                  "description": "Y-m-d",
+                  "disabled": true
+                },
+                {
+                  "key": "date_of_birth",
+                  "value": "2026-10-10",
+                  "type": "text",
+                  "description": "Y-m-d",
+                  "disabled": true
+                },
+                {
+                  "key": "blood_group",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "gender",
+                  "value": "Female",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "mpo",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "password",
+                  "value": "123456789",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "address",
+                  "value": "Shoronkhola, Bagerhat",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "permanent_address",
+                  "value": "",
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "all_academic_transcript",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5",
+                  "disabled": true
+                },
+                {
+                  "key": "appointment_letter",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5",
+                  "disabled": true
+                },
+                {
+                  "key": "mpo_file",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5",
+                  "disabled": true
+                },
+                {
+                  "key": "nid_file",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5",
+                  "disabled": true
+                },
+                {
+                  "key": "college_gadget",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5",
+                  "disabled": true
+                },
+                {
+                  "key": "pay_fixation",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4",
+                  "disabled": true
+                },
+                {
+                  "key": "photo",
+                  "type": "file",
+                  "src": "postman-cloud:///1f0fa8e5-0e8f-45f0-9677-540fcba7200c",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{current_api_url}}/teacher/profile-update",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "profile-update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Assignment Answer",
+      "item": [
+        {
+          "name": "Answer List",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{teacher_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{current_api_url}}/teacher/assignment-answer",
+              "host": [
+                "{{current_api_url}}"
+              ],
+              "path": [
+                "teacher",
+                "assignment-answer"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "View any File",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{teacher_token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{current_api_url}}/teacher/view-file?path=/storage/teacher/cfbd349a-6b56-4b69-90bb-8bfea5915040.png",
+          "host": [
+            "{{current_api_url}}"
+          ],
+          "path": [
+            "teacher",
+            "view-file"
+          ],
+          "query": [
+            {
+              "key": "path",
+              "value": "/storage/teacher/cfbd349a-6b56-4b69-90bb-8bfea5915040.png"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "api_base_url",
+      "value": ""
+    },
+    {
+      "key": "email",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

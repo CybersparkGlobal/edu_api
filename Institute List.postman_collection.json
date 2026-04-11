@@ -1,0 +1,465 @@
+{
+  "info": {
+    "_postman_id": "b3fdbd08-c061-4a13-9a99-beb86483c345",
+    "name": "Institute List",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31573826",
+    "_collection_link": "https://go.postman.co/collection/42436005-b3fdbd08-c061-4a13-9a99-beb86483c345?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "institute_list",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "https://cybersparkglobal.com/api/institute-lists",
+          "protocol": "https",
+          "host": [
+            "cybersparkglobal",
+            "com"
+          ],
+          "path": [
+            "api",
+            "institute-lists"
+          ]
+        },
+        "description": "when live server then always use our base url cybersparkglobal.com"
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "cybersparkglobal.test/api/institute-lists",
+              "host": [
+                "cybersparkglobal",
+                "test"
+              ],
+              "path": [
+                "api",
+                "institute-lists"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sun, 04 Jan 2026 08:21:37 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.1.31"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "60"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "58"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name_en\": \"Sharankhola Govt. Degree College\",\n            \"name_bn\": \"শরণখোলা সরকারি ডিগ্রি কলেজ\",\n            \"slug\": \"sharankhola_govt_degree_college\",\n            \"short_name\": \"SGDC\",\n            \"api_base_url\": \"http://college.test/api\",\n            \"logo\": \"http://sgdc.test/logo.png\",\n            \"status\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"xyz\",\n            \"slug\": \"xyz-college\",\n            \"short_name\": \"XYZ\",\n            \"api_base_url\": \"https://xyzcollege.edu/api\",\n            \"logo\": \"https://xyzcollege.edu/logo.png\",\n            \"status\": 1\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Institute Logo",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://cybersparkglobal.test/api/get/logo?institute_id=1",
+          "protocol": "http",
+          "host": [
+            "cybersparkglobal",
+            "test"
+          ],
+          "path": [
+            "api",
+            "get",
+            "logo"
+          ],
+          "query": [
+            {
+              "key": "institute_id",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "when live server then always use our base url cybersparkglobal.com"
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "cybersparkglobal.test/api/institute-lists",
+              "host": [
+                "cybersparkglobal",
+                "test"
+              ],
+              "path": [
+                "api",
+                "institute-lists"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sun, 04 Jan 2026 08:21:37 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.1.31"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "60"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "58"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name_en\": \"Sharankhola Govt. Degree College\",\n            \"name_bn\": \"শরণখোলা সরকারি ডিগ্রি কলেজ\",\n            \"slug\": \"sharankhola_govt_degree_college\",\n            \"short_name\": \"SGDC\",\n            \"api_base_url\": \"http://college.test/api\",\n            \"logo\": \"http://sgdc.test/logo.png\",\n            \"status\": 1\n        },\n        {\n            \"id\": 2,\n            \"name\": \"xyz\",\n            \"slug\": \"xyz-college\",\n            \"short_name\": \"XYZ\",\n            \"api_base_url\": \"https://xyzcollege.edu/api\",\n            \"logo\": \"https://xyzcollege.edu/logo.png\",\n            \"status\": 1\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "forgot Password Otp sent",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "phone_or_email",
+              "value": "01779287296",
+              "type": "text"
+            },
+            {
+              "key": "institute_id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://cybersparkglobal.com/api/teacher/forgot-password-otp",
+          "protocol": "https",
+          "host": [
+            "cybersparkglobal",
+            "com"
+          ],
+          "path": [
+            "api",
+            "teacher",
+            "forgot-password-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "teacher login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "\r",
+              "// response JSON \r",
+              "var jsonData = pm.response.json();\r",
+              "\r",
+              "if (jsonData.status === true) {\r",
+              "    var rawUrl = jsonData.api_base_url; \r",
+              "    \r",
+              "    // ২. http:// https:// remove\r",
+              "    // var cleanUrl = rawUrl.replace(/^(https?:\\/\\/)/, \"\");\r",
+              "\r",
+              "    // ৩. Environment Variables\r",
+              "    pm.environment.set(\"current_api_url\", rawUrl);\r",
+              "    pm.environment.set(\"teacher_token\", jsonData.token);\r",
+              "    \r",
+              "    console.log(\"Cleaned URL saved: \" + rawUrl);\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "pm.sendRequest(\"https://cybersparkglobal.com/api/csrf-token\", (err, res) => {\r",
+              "    if (!err) {\r",
+              "        const token = res.json().token; // adjust based on actual response\r",
+              "        pm.request.headers.upsert({\r",
+              "            key: \"X-CSRF-TOKEN\",\r",
+              "            value: token\r",
+              "        });\r",
+              "    }\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "phone_or_email",
+              "value": "01779287296",
+              "type": "text"
+            },
+            {
+              "key": "password",
+              "value": "123456789",
+              "type": "text"
+            },
+            {
+              "key": "institute_id",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://cybersparkglobal.com/api/teacher-login",
+          "protocol": "https",
+          "host": [
+            "cybersparkglobal",
+            "com"
+          ],
+          "path": [
+            "api",
+            "teacher-login"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "cybersparkglobal.test/api/teacher-login?phone_or_email=01779287296&password=123456789&institute_id=1",
+              "host": [
+                "cybersparkglobal",
+                "test"
+              ],
+              "path": [
+                "api",
+                "teacher-login"
+              ],
+              "query": [
+                {
+                  "key": "phone_or_email",
+                  "value": "01779287296"
+                },
+                {
+                  "key": "password",
+                  "value": "123456789"
+                },
+                {
+                  "key": "institute_id",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sun, 04 Jan 2026 11:15:53 GMT"
+            },
+            {
+              "key": "Server",
+              "value": "Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "PHP/8.1.31"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, private"
+            },
+            {
+              "key": "X-RateLimit-Limit",
+              "value": "60"
+            },
+            {
+              "key": "X-RateLimit-Remaining",
+              "value": "58"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5, max=100"
+            },
+            {
+              "key": "Connection",
+              "value": "Keep-Alive"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": true,\n    \"token\": \"8|Ca9piLy99tfsXfaJ31lalczuF1I95Eaf6cuSpGK9f4b7c150\",\n    \"user\": {\n        \"id\": 65,\n        \"name\": \"Hawlader Mosharraf Hossain\",\n        \"username\": \"Musharraf\",\n        \"email\": \"howladermosarafhosen@gmail.com\",\n        \"designation\": \"Assistant Professor (Part-time), Biology\",\n        \"subject_name\": \"Biology\",\n        \"phone\": \"01779287296\",\n        \"address\": \"Shoronkhola, Bagerhat\",\n        \"gender\": \"Male\",\n        \"email_verified_at\": null,\n        \"password\": \"$2y$10$dyahTPwazCN7m3JjEu6TSeprf8L5.3f8gjtggxPTysZeTc2dlcV1K\",\n        \"password_show\": \"123456789\",\n        \"pay_fixation\": null,\n        \"college_gadget\": null,\n        \"nid_file\": null,\n        \"mpo\": null,\n        \"appointment_letter\": null,\n        \"all_academic_transcript\": null,\n        \"mpo_file\": null,\n        \"gov_joining_date\": null,\n        \"non_gov_joining_date\": null,\n        \"passport_no\": null,\n        \"bank_id\": null,\n        \"blood_group\": null,\n        \"permanent_address\": null,\n        \"religion\": null,\n        \"nid_no\": null,\n        \"date_of_birth\": null,\n        \"mother_name\": null,\n        \"father_name\": null,\n        \"created_by\": \"admin\",\n        \"updated_by\": \"admin\",\n        \"deleted_by\": null,\n        \"photo\": \"288aacfb-52fc-47db-b3e5-527079956bcb.png\",\n        \"deleted_at\": null,\n        \"created_at\": \"2025-02-16T10:31:52.000000Z\",\n        \"updated_at\": \"2025-02-27T12:39:59.000000Z\"\n    },\n    \"institute\": \"Sharankhola Govt. Degree College\",\n    \"api_base_url\": \"http://college.test/api\"\n}"
+        }
+      ]
+    }
+  ]
+}
