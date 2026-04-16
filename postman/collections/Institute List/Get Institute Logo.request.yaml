@@ -1,0 +1,11 @@
+$kind: http-request
+name: Get Institute Logo
+description: when live server then always use our base url cybersparkglobal.com
+url: https://cybersparkglobal.com/api/institute-logo?institute_id=1
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  institute_id: "1"
+examples: ./.resources/Get Institute Logo.resources/examples
+order: 2000

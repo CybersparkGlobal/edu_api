@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/get-attendance?class_id=1&department_id=8&sec\
+  tion_id=10&subject_id=144&session=2024-25"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  class_id: "1"
+  department_id: "8"
+  section_id: "10"
+  subject_id: "144"
+  session: 2024-25
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 5000

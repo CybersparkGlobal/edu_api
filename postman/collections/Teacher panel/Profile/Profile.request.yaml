@@ -1,0 +1,13 @@
+$kind: http-request
+url: https://college.cybersparkglobal.com/api/teacher/profile
+method: GET
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content: []
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 1000

@@ -1,0 +1,55 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/exam-marks-save"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content:
+    - type: text
+      key: student_id
+      value: "46"
+    - type: text
+      key: class_id
+      value: "1"
+    - type: text
+      key: exam_id
+      value: "1"
+    - type: text
+      key: exam_year
+      value: "2025"
+    - type: text
+      key: session
+      value: 2024-25
+    - type: text
+      key: subject_id
+      value: "144"
+    - type: text
+      key: search
+      value: ""
+    - type: text
+      key: marks[cq]
+      value: "50"
+    - type: text
+      key: marks[mcq]
+      value: "10"
+    - type: text
+      key: marks[practical]
+      value: "20"
+    - type: text
+      key: marks[quiz_test]
+      value: ""
+    - type: text
+      key: marks[mid_term]
+      value: ""
+    - type: text
+      key: marks[attendance]
+      value: ""
+    - type: text
+      key: marks[is_absent]
+      value: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 3000

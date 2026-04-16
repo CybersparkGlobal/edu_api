@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/update-attendance?student_id=46&class_id=1&da\
+  te=2026-01-22&section_id=10&department_id=8&subject_id=144&is_present=1"
+method: POST
+headers:
+  Accept: application/json
+queryParams:
+  - key: student_id
+    value: "46"
+  - key: class_id
+    value: "1"
+  - key: date
+    value: 2026-01-22
+    description: yy-mm-dd
+  - key: section_id
+    value: "10"
+  - key: department_id
+    value: "8"
+  - key: subject_id
+    value: "144"
+  - key: is_present
+    value: "1"
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 6000

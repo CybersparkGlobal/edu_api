@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/notice/mark-as-read"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content:
+    - type: text
+      key: notice_id
+      value: "61"
+      description: required
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 3000

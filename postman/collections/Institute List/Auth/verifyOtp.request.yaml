@@ -1,0 +1,14 @@
+$kind: http-request
+name: verifyOtp
+url: "{{ api_base_url }}/verifyOtp?email=aktarozzaman8@gmail.com&otp=182517"
+method: POST
+headers:
+  Accept: application/json
+queryParams:
+  email: aktarozzaman8@gmail.com
+  otp: "182517"
+auth:
+  type: bearer
+  credentials:
+    token: ""
+order: 2000

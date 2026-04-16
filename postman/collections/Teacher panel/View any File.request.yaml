@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/view-file?path=/storage/teacher/cfbd349a-6b56\
+  -4b69-90bb-8bfea5915040.png"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  path: /storage/teacher/cfbd349a-6b56-4b69-90bb-8bfea5915040.png
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 12000

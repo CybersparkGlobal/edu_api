@@ -1,0 +1,47 @@
+$kind: http-example
+request:
+  url: cybersparkglobal.test/api/institute-lists
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Sun, 04 Jan 2026 08:21:37 GMT
+    Server: Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev
+    X-Powered-By: PHP/8.1.31
+    Cache-Control: no-cache, private
+    X-RateLimit-Limit: "60"
+    X-RateLimit-Remaining: "58"
+    Access-Control-Allow-Origin: "*"
+    Keep-Alive: timeout=5, max=100
+    Connection: Keep-Alive
+    Transfer-Encoding: chunked
+    Content-Type: application/json
+  body:
+    type: text
+    content: |-
+      {
+          "status": true,
+          "data": [
+              {
+                  "id": 1,
+                  "name_en": "Sharankhola Govt. Degree College",
+                  "name_bn": "শরণখোলা সরকারি ডিগ্রি কলেজ",
+                  "slug": "sharankhola_govt_degree_college",
+                  "short_name": "SGDC",
+                  "api_base_url": "http://college.test/api",
+                  "logo": "http://sgdc.test/logo.png",
+                  "status": 1
+              },
+              {
+                  "id": 2,
+                  "name": "xyz",
+                  "slug": "xyz-college",
+                  "short_name": "XYZ",
+                  "api_base_url": "https://xyzcollege.edu/api",
+                  "logo": "https://xyzcollege.edu/logo.png",
+                  "status": 1
+              }
+          ]
+      }
+order: 1000

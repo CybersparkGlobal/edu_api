@@ -1,0 +1,8 @@
+name: New Environment
+values:
+  - key: current_api_url
+    value: ''
+    enabled: true
+  - key: teacher_token
+    value: ''
+    enabled: true

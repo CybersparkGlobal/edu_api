@@ -1,0 +1,40 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/assignment-update"
+method: POST
+headers:
+  - key: Accept
+    value: application/json
+  - key: Accept
+    value: multipart/form-data
+body:
+  type: formdata
+  content:
+    - type: text
+      key: id
+      value: "8"
+    - type: text
+      key: class_id
+      value: "1"
+    - type: text
+      key: department_id
+      value: "8"
+    - type: text
+      key: section_id
+      value: "10"
+    - type: text
+      key: assignment_name
+      value: demo update
+    - type: text
+      key: subject_id
+      value: "144"
+    - type: text
+      key: submission_date
+      value: 01-22-2026
+    - type: file
+      key: file
+      src: postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 9000

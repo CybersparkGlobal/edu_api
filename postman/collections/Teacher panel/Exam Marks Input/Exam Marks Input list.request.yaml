@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/exam-marks-input?class_id=1&section_id=10&dep\
+  artment_id=8&exam_id=1&exam_year=2026&session=2024-25&search="
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  class_id: "1"
+  section_id: "10"
+  department_id: "8"
+  exam_id: "1"
+  exam_year: "2026"
+  session: 2024-25
+  search: ""
+body:
+  type: formdata
+  content: []
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 1000

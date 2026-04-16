@@ -1,0 +1,78 @@
+$kind: http-request
+name: login
+url: http://cybersparkglobal.test/api/login
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content:
+    - type: text
+      key: phone_or_email
+      value: "01779287296"
+      disabled: false
+    - type: text
+      key: password
+      value: "123456789"
+      disabled: false
+    - type: text
+      key: institute_id
+      value: "1"
+      disabled: false
+scripts:
+  - type: afterResponse
+    code: "\r
+
+      // response JSON \r
+
+      var jsonData = pm.response.json();\r
+
+      \r
+
+      if (jsonData.status === true) {\r
+
+      \    var rawUrl = jsonData.api_base_url; \r
+
+      \    \r
+
+      \    // ২. http:// https:// remove\r
+
+      \    // var cleanUrl = rawUrl.replace(/^(https?:\\/\\/)/, \"\");\r
+
+      \r
+
+      \    // ৩. Environment Variables\r
+
+      \    pm.environment.set(\"current_api_url\", rawUrl);\r
+
+      \    pm.environment.set(\"teacher_token\", jsonData.token);\r
+
+      \    \r
+
+      \    console.log(\"Cleaned URL saved: \" + rawUrl);\r
+
+      }"
+    language: text/javascript
+  - type: beforeRequest
+    code: "pm.sendRequest(\"https://cybersparkglobal.com/api/csrf-token\", (err,
+      res) => {\r
+
+      \    if (!err) {\r
+
+      \        const token = res.json().token; // adjust based on actual
+      response\r
+
+      \        pm.request.headers.upsert({\r
+
+      \            key: \"X-CSRF-TOKEN\",\r
+
+      \            value: token\r
+
+      \        });\r
+
+      \    }\r
+
+      });"
+    language: text/javascript
+examples: .resources/login.resources/examples
+order: 2933432235591026

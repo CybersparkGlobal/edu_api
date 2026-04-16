@@ -1,0 +1,72 @@
+$kind: http-example
+request:
+  url: cybersparkglobal.test/api/teacher-login?phone_or_email=01779287296&password=123456789&institute_id=1
+  method: POST
+  queryParams:
+    phone_or_email: "01779287296"
+    password: "123456789"
+    institute_id: "1"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Sun, 04 Jan 2026 11:15:53 GMT
+    Server: Apache/2.4.62 (Win64) PHP/8.1.31 mod_fcgid/2.3.10-dev
+    X-Powered-By: PHP/8.1.31
+    Cache-Control: no-cache, private
+    X-RateLimit-Limit: "60"
+    X-RateLimit-Remaining: "58"
+    Access-Control-Allow-Origin: "*"
+    Keep-Alive: timeout=5, max=100
+    Connection: Keep-Alive
+    Transfer-Encoding: chunked
+    Content-Type: application/json
+  body:
+    type: text
+    content: >-
+      {
+          "status": true,
+          "token": "8|Ca9piLy99tfsXfaJ31lalczuF1I95Eaf6cuSpGK9f4b7c150",
+          "user": {
+              "id": 65,
+              "name": "Hawlader Mosharraf Hossain",
+              "username": "Musharraf",
+              "email": "howladermosarafhosen@gmail.com",
+              "designation": "Assistant Professor (Part-time), Biology",
+              "subject_name": "Biology",
+              "phone": "01779287296",
+              "address": "Shoronkhola, Bagerhat",
+              "gender": "Male",
+              "email_verified_at": null,
+              "password": "$2y$10$dyahTPwazCN7m3JjEu6TSeprf8L5.3f8gjtggxPTysZeTc2dlcV1K",
+              "password_show": "123456789",
+              "pay_fixation": null,
+              "college_gadget": null,
+              "nid_file": null,
+              "mpo": null,
+              "appointment_letter": null,
+              "all_academic_transcript": null,
+              "mpo_file": null,
+              "gov_joining_date": null,
+              "non_gov_joining_date": null,
+              "passport_no": null,
+              "bank_id": null,
+              "blood_group": null,
+              "permanent_address": null,
+              "religion": null,
+              "nid_no": null,
+              "date_of_birth": null,
+              "mother_name": null,
+              "father_name": null,
+              "created_by": "admin",
+              "updated_by": "admin",
+              "deleted_by": null,
+              "photo": "288aacfb-52fc-47db-b3e5-527079956bcb.png",
+              "deleted_at": null,
+              "created_at": "2025-02-16T10:31:52.000000Z",
+              "updated_at": "2025-02-27T12:39:59.000000Z"
+          },
+          "institute": "Sharankhola Govt. Degree College",
+          "api_base_url": "http://college.test/api"
+      }
+order: 1000

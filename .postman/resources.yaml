@@ -1,0 +1,18 @@
+# Use this workspace to collaborate
+workspace:
+  id: 271d86d4-72f4-4da8-8b38-4479dd1d204a
+
+localResources:
+  collections:
+    - ..\Institute List.postman_collection.json
+    - ..\Teacher panel.postman_collection.json
+  environments:
+    - ..\Cyberspark global.postman_environment.json
+    - ..\institution_api.postman_environment.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ..\postman\collections\Institute List: 28423056-63accc0f-73f7-4409-ac64-9da29400a513
+    ..\postman\collections\Teacher panel: 28423056-e97eb8ce-70fb-4a99-b458-1008f7ddc1b6

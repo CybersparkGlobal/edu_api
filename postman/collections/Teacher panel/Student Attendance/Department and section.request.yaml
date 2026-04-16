@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/get-dept-section?class_id=1"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  class_id: "1"
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 2000

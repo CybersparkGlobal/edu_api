@@ -1,0 +1,121 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/profile-update"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content:
+    - type: text
+      key: name
+      value: Hawlader Mosharraf Hossain
+    - type: text
+      key: username
+      value: Musharraf
+      disabled: true
+    - type: text
+      key: phone
+      value: "01779287296"
+      disabled: true
+    - type: text
+      key: email
+      value: aktarozzaman5002@gmail.com
+      disabled: true
+    - type: text
+      key: father_name
+      value: demo
+      disabled: true
+    - type: text
+      key: mother_name
+      value: sd
+      disabled: true
+    - type: text
+      key: religion
+      value: Islam
+      disabled: true
+    - type: text
+      key: nid_no
+      value: ""
+      disabled: true
+    - type: text
+      key: bank_id
+      value: ""
+      disabled: true
+    - type: text
+      key: passport_no
+      value: ""
+      disabled: true
+    - type: text
+      key: non_gov_joining_date
+      value: 2026-10-11
+      description: Y-m-d
+      disabled: true
+    - type: text
+      key: gov_joining_date
+      value: 2026-10-15
+      description: Y-m-d
+      disabled: true
+    - type: text
+      key: date_of_birth
+      value: 2026-10-10
+      description: Y-m-d
+      disabled: true
+    - type: text
+      key: blood_group
+      value: ""
+      disabled: true
+    - type: text
+      key: gender
+      value: Female
+      disabled: true
+    - type: text
+      key: mpo
+      value: ""
+      disabled: true
+    - type: text
+      key: password
+      value: "123456789"
+      disabled: true
+    - type: text
+      key: address
+      value: Shoronkhola, Bagerhat
+      disabled: true
+    - type: text
+      key: permanent_address
+      value: ""
+      disabled: true
+    - type: file
+      key: all_academic_transcript
+      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      disabled: true
+    - type: file
+      key: appointment_letter
+      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      disabled: true
+    - type: file
+      key: mpo_file
+      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      disabled: true
+    - type: file
+      key: nid_file
+      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      disabled: true
+    - type: file
+      key: college_gadget
+      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      disabled: true
+    - type: file
+      key: pay_fixation
+      src: postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4
+      disabled: true
+    - type: file
+      key: photo
+      src: postman-cloud:///1f0fa8e5-0e8f-45f0-9677-540fcba7200c
+      disabled: true
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+settings:
+  strictSSL: false
+order: 2000

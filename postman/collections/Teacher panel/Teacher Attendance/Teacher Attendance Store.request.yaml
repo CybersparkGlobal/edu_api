@@ -1,0 +1,11 @@
+$kind: http-request
+name: Teacher Attendance Store
+url: "{{current_api_url}}/teacher/attendance/store"
+method: GET
+headers:
+  Accept: application/json
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 3000

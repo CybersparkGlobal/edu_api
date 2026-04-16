@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/notice"
+method: GET
+headers:
+  Accept: application/json
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 1000

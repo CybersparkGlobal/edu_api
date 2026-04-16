@@ -1,0 +1,8 @@
+$kind: http-request
+description: when live server then always use our base url cybersparkglobal.com
+url: https://cybersparkglobal.com/api/institute-lists
+method: GET
+headers:
+  Accept: application/json
+examples: ./.resources/institute_list.resources/examples
+order: 1000

@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/class/checkin?subject_routine_id=882"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  subject_routine_id: "882"
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 2000

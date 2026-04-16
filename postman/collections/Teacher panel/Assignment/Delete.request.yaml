@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{current_api_url}}/teacher/assignment-delete?id=5"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  id: "5"
+auth:
+  type: bearer
+  credentials:
+    token: "{{teacher_token}}"
+order: 4000
