@@ -1,4 +1,5 @@
 $kind: http-request
+name: Update
 url: "{{current_api_url}}/teacher/profile-update"
 method: POST
 headers:
@@ -9,18 +10,19 @@ body:
     - type: text
       key: name
       value: Hawlader Mosharraf Hossain
+      disabled: false
     - type: text
       key: username
       value: Musharraf
       disabled: true
     - type: text
       key: phone
-      value: "01779287296"
-      disabled: true
+      value: "01750025266"
+      disabled: false
     - type: text
       key: email
       value: aktarozzaman5002@gmail.com
-      disabled: true
+      disabled: false
     - type: text
       key: father_name
       value: demo
@@ -86,31 +88,38 @@ body:
       disabled: true
     - type: file
       key: all_academic_transcript
-      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      src:
+        - postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
       disabled: true
     - type: file
       key: appointment_letter
-      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      src:
+        - postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
       disabled: true
     - type: file
       key: mpo_file
-      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      src:
+        - postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
       disabled: true
     - type: file
       key: nid_file
-      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      src:
+        - postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
       disabled: true
     - type: file
       key: college_gadget
-      src: postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
+      src:
+        - postman-cloud:///1f0fa913-ae6c-46d0-b0c2-7d18717a6ac5
       disabled: true
     - type: file
       key: pay_fixation
-      src: postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4
+      src:
+        - postman-cloud:///1f0f7741-775f-49c0-b818-6b920e1f98d4
       disabled: true
     - type: file
       key: photo
-      src: postman-cloud:///1f0fa8e5-0e8f-45f0-9677-540fcba7200c
+      src:
+        - postman-cloud:///1f0fa8e5-0e8f-45f0-9677-540fcba7200c
       disabled: true
 auth:
   type: bearer

@@ -1,0 +1,24 @@
+$kind: http-request
+name: verifyOtp
+url: "{{ api_base_url }}/verifyOtp"
+method: POST
+headers:
+  Accept: application/json
+body:
+  type: formdata
+  content:
+    - type: text
+      key: email
+      value: aktarozzaman8@gmail.com
+      description: ""
+      disabled: false
+    - type: text
+      key: otp
+      value: "943426"
+      description: ""
+      disabled: false
+auth:
+  type: bearer
+  credentials:
+    token: ""
+order: 1776317590799

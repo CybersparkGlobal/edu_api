@@ -1,5 +1,6 @@
 $kind: http-request
-url: "{{current_api_url}}/teacher/logout"
+name: logout
+url: "{{current_api_url}}/logout"
 method: POST
 headers:
   Accept: application/json

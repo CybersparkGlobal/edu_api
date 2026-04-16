@@ -16,3 +16,5 @@ cloudResources:
   collections:
     ..\postman\collections\Institute List: 28423056-63accc0f-73f7-4409-ac64-9da29400a513
     ..\postman\collections\Teacher panel: 28423056-e97eb8ce-70fb-4a99-b458-1008f7ddc1b6
+  environments:
+    ..\postman\environments\New Environment.environment.yaml: 2c7dcaa4-0b85-440b-ba0c-362d81417480
